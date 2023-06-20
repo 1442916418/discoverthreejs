@@ -1,0 +1,23 @@
+{
+  "name": "discoverthreejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1442916418/discoverthreejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1442916418/discoverthreejs/issues"
+  },
+  "homepage": "https://github.com/1442916418/discoverthreejs#readme",
+  "dependencies": {
+    "three": "^0.153.0"
+  }
+}
