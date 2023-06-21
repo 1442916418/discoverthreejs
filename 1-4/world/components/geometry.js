@@ -1,13 +1,15 @@
-import { BoxGeometry, SphereGeometry, MeshBasicMaterial, Mesh } from 'three'
+import { BoxGeometry, SphereGeometry, MeshBasicMaterial, MeshStandardMaterial, Mesh } from 'three'
 
 /**
  * 创建立方体
  */
 function createCube() {
   const geometry = new BoxGeometry(2, 2, 2)
-  const material = new MeshBasicMaterial()
+  const material = new MeshStandardMaterial({ color: 'purple' })
 
   const cube = new Mesh(geometry, material)
+
+  cube.rotation.set(-0.5, -0.1, 0.8)
 
   return cube
 }
@@ -21,7 +23,7 @@ function createSphere() {
 
   const sphere = new Mesh(geometry, material)
 
-  sphere.position.set(5, 0, 0)
+  sphere.position.set(4, 0, 0)
 
   return sphere
 }
