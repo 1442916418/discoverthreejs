@@ -1,4 +1,13 @@
-import { BoxGeometry, SphereGeometry, MeshBasicMaterial, MeshStandardMaterial, Mesh } from 'three'
+import {
+  BoxGeometry,
+  SphereGeometry,
+  MeshBasicMaterial,
+  MeshStandardMaterial,
+  MeshPhongMaterial,
+  Mesh,
+  LineBasicMaterial,
+  LineSegments
+} from 'three'
 
 /**
  * 创建立方体
@@ -18,9 +27,8 @@ function createCube() {
  * 创建球体
  */
 function createSphere() {
-  const geometry = new SphereGeometry(2, 32, 16)
-  const material = new MeshBasicMaterial({ color: 0xffff00 })
-
+  const geometry = new SphereGeometry(1, 32, 16)
+  const material = new MeshStandardMaterial({ color: 0xff00ff })
   const sphere = new Mesh(geometry, material)
 
   sphere.position.set(4, 0, 0)
