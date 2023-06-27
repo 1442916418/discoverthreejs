@@ -12,6 +12,13 @@ function createGeometers() {
 
   // 烟囱
   const chimney = new CylinderGeometry(0.3, 0.1, 0.5, 8) 
+
+  return {
+    cabin,
+    nose,
+    wheel,
+    chimney
+  }
 }
 
 export { createGeometers  }

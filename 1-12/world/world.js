@@ -1,8 +1,8 @@
 import { createCamera } from './components/camera.js'
 import { createScene } from './components/scene.js'
 import { createLights } from './components/lights.js'
-import { createAxesHelper, createGridHelper } from './components/helpers.js'
-import { Train } from './components/train/train.js'
+import { createOriginAxesHelper, createAxesHelper, createGridHelper } from './components/helpers.js'
+import { Train, createTrains , createTrainGroups} from './components/train/train.js'
 
 import { createRenderer } from './systems/renderer.js'
 import { Resizer } from './systems/resizer.js'
@@ -27,15 +27,18 @@ class World {
     container.append(renderer.domElement)
 
     const train = new Train()
+    // const train = createTrains()
+    // const train = createTrainGroups()
+
     const { mainLight, ambientLight } = createLights()
 
-    scene.add(train,mainLight, ambientLight)
-    scene.add(createAxesHelper(), createGridHelper())
+    scene.add(train, mainLight, ambientLight)
+    scene.add(createOriginAxesHelper(), createAxesHelper(), createGridHelper()) 
 
     const controls = createControls(camera, renderer.domElement)
     const resizer = new Resizer(container, camera, renderer)
 
-    loop.updatables.push(controls)
+    loop.updatables.push(controls, train)
   }
 
   render() {
