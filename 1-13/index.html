@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.13 以 glTF 格式加载 3D 模型</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+  </head>
+  <body>
+    <div id="scene-container"></div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "../node_modules/three/build/three.module.js",
+          "three/examples/jsm/controls/OrbitControls.js": "../node_modules/three/examples/jsm/controls/OrbitControls.js",
+          "three/examples/jsm/loaders/GLTFLoader.js": "../node_modules/three/examples/jsm/loaders/GLTFLoader.js"
+        }
+      }
+    </script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
