@@ -6,7 +6,7 @@ import { Scene, Color } from 'three'
 function createScene() {
   const scene = new Scene()
 
-  scene.background = new Color('#CCFFFF')
+  scene.background = new Color(COLORS.blueviolet.name)
 
   return scene
 }

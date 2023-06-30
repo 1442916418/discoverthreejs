@@ -1,6 +1,6 @@
 // 1 初始设置
 // 1.1 从 three.js 中导入类
-import { Scene, WebGL1Renderer, PerspectiveCamera, Mesh, MeshBasicMaterial, BoxGeometry, Color } from 'three'
+import { Scene, WebGLRenderer, PerspectiveCamera, Mesh, MeshBasicMaterial, BoxGeometry, Color } from 'three'
 
 // 1.2 获取容器
 const container = document.querySelector('#scene-container')
@@ -39,7 +39,7 @@ scene.add(mesh)
 
 // 5 创建渲染器
 // 5.1 创建
-const renderer = new WebGL1Renderer()
+const renderer = new WebGLRenderer()
 
 // 5.2 设置渲染器大小
 renderer.setSize(container.clientWidth, container.clientHeight)

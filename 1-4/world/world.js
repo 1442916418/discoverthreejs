@@ -27,7 +27,7 @@ class World {
     const pointLight = new createPointLights()
     const spotLight = new createSpotLights()
 
-    scene.add(cube, sphere, spotLight)
+    scene.add(cube, sphere, lights)
 
     const resizer = new Resizer(container, camera, renderer)
   }

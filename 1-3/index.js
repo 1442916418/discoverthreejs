@@ -13,4 +13,10 @@ function main() {
   world.render()
 }
 
-main()
+function init() {
+  const button = document.querySelector('button')
+
+  button.addEventListener('click', () => main())
+}
+
+init()

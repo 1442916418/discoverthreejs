@@ -4,9 +4,9 @@ import { DirectionalLight, PointLight, SpotLight } from 'three'
  * 创建定向光光源
  */
 function createLights() {
-  const light = new DirectionalLight('blue', 8)
+  const light = new DirectionalLight(COLORS.white.name, 8)
 
-  light.position.set(-150, 10, 10)
+  light.position.set(0, 100, 10)
 
   return light
 }
