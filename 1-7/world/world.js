@@ -27,7 +27,7 @@ class World {
     const cube = createCube()
     const lights = createLights()
 
-    loop.updatables.push(lights)
+    loop.updatables.push(cube)
 
     scene.add(cube, lights)
 
