@@ -28,9 +28,9 @@ class World {
 
     container.append(renderer.domElement)
 
-    // const { mainLight, ambientLight } = createLights()
+    const { mainLight, ambientLight } = createLights()
 
-    // scene.add(mainLight)
+    scene.add(mainLight)
     scene.add(createAxesHelper())
 
     const resizer = new Resizer(container, camera, renderer)

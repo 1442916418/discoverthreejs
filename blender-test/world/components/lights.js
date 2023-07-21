@@ -5,15 +5,18 @@ import { DirectionalLight, PointLight, SpotLight, AmbientLight, HemisphereLight,
  */
 function createLights() {
   // 半球光
-  const ambientLight = new HemisphereLight('white', 'darkslategrey', 5)
+  const hemisphereLight = new HemisphereLight('white', 'darkslategrey', 5)
+
+  // 环境光
+  const ambientLight = new AmbientLight('white', 2)
 
   const mainLight = new DirectionalLight('white', 4)
 
-  mainLight.position.set(10, 10, 10)
+  mainLight.position.set(0, 100, 50)
 
   mainLight.tick = (delta) => {}
 
-  return { mainLight, ambientLight }
+  return { mainLight, ambientLight, hemisphereLight }
 }
 
 /**
