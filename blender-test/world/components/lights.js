@@ -10,7 +10,7 @@ function createLights() {
   // 环境光
   const ambientLight = new AmbientLight('white', 2)
 
-  const mainLight = new DirectionalLight('white', 4)
+  const mainLight = new DirectionalLight('white', 1)
 
   mainLight.position.set(0, 100, 50)
 

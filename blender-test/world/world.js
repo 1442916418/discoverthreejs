@@ -30,7 +30,7 @@ class World {
 
     const { mainLight, ambientLight } = createLights()
 
-    scene.add(mainLight)
+    scene.add(ambientLight)
     scene.add(createAxesHelper())
 
     const resizer = new Resizer(container, camera, renderer)
